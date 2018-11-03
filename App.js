@@ -45,7 +45,7 @@ export default class App extends Component {
         });
       });
   };
-  render() {
+  render() { 
       const {
         isLoaded,
         error,
@@ -84,3 +84,4 @@ const styles = StyleSheet.create({
     marginBottom: 100
   }
 });
+
