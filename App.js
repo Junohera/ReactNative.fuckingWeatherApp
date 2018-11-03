@@ -52,45 +52,14 @@ export default class App extends Component {
         temperature,
         name
       } = this.state;
-      return ( <
-          View style = {
-            styles.container
-          } >
-          <
-          StatusBar hidden = {
-            true
-          }
-          /> {
-          isLoaded ?
-          <
-          Weather weatherName = {
-            name
-          }
-          temp = {
-            Math.ceil(temperature - 273.15)
-          }
-          />: < View style = {
-          styles.loading
-        } >
-        <
-        Text style = {
-          styles.loadingText
-        } > Getting the funcking weather < /Text> {
-      error
-        ?
-        <
-        Text style = {
-          styles.errorText
-        } > {
-          error
-        } <
-        /Text> :
-      null
-    } <
-    /View>} < /
-  View >
-);
-}
+      return (
+        <View style={styles.container}>
+          <StatusBar hidden={true}/> {isLoaded ? 
+          <Weather weatherName={name} temp={Math.ceil(temperature - 273.15)}/> : <View style={styles.loading}>
+          <Text style = {styles.loadingText}> Getting the funcking weather </Text> {error?<Text style={styles.errorText} > {error} </Text> :null} </View>} 
+        </View>
+      );
+    }
 }
 //TODO: Component Weather declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?
 
