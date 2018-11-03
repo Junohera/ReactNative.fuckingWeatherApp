@@ -84,6 +84,3 @@ const styles = StyleSheet.create({
     marginBottom: 100
   }
 });
-
-
-
